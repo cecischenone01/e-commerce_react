@@ -1,0 +1,17 @@
+.container{
+    width: 80%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    margin-left: 20px;
+    display: flex;
+}
+ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+li{
+    display: inline-block;
+    margin: 5px 5px 5px 10px;
+}

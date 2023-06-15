@@ -1,0 +1,10 @@
+.detailContainer{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(250, 249, 244);
+    display: flex;
+    justify-content: center;
+}
+.detailCard{
+    margin-top: 30px;
+}
