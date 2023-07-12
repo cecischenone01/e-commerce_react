@@ -1,7 +1,7 @@
 import useCount from "../../hooks/useCount";
 
-const ItemCount = ({stock, initial, onAdd}) => {
-    const {count, decrement, increment} = useCount(initial, stock)
+const ItemCount = ({ stock, initial = 1, onAdd }) => {
+  const { count, decrement, increment } = useCount(initial, stock);
 
   return (
     <>
@@ -9,10 +9,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <button onClick={decrement}>-</button>
         <span>{count}</span>
         <button onClick={increment}>+</button>
-        <button onClick={()=> onAdd(count)}>Agregar al carrito</button>
+        <button onClick={() => onAdd(count)}>Agregar al carrito</button>
       </div>
     </>
   );
-}
+};
 
-export default ItemCount
+export default ItemCount;

@@ -1,7 +1,6 @@
 
 export const products = [
   {
-    id: 1,
     title: "Cisne Rendidora Jumbo",
     description: "lana cisne rendidora jumbo 100% acrilico ",
     color: "lila",
@@ -11,7 +10,6 @@ export const products = [
     category: "lanas",
   },
   {
-    id: 2,
     title: "Cisne Rendidora Jumbo",
     description: "lana cisne rendidora jumbo 100% acrilico ",
     color: "Rosa bebé",
@@ -21,7 +19,6 @@ export const products = [
     category: "lanas",
   },
   {
-    id: 3,
     title: "Cisne Rendidora Jumbo",
     description: "lana cisne rendidora jumbo 100% acrilico ",
     color: "Fucsia",
@@ -31,7 +28,6 @@ export const products = [
     category: "lanas",
   },
   {
-    id: 4,
     title: "Cisne Rendidora Jumbo",
     description: "lana cisne rendidora jumbo 100% acrilico ",
     color: "Violeta",
@@ -41,7 +37,6 @@ export const products = [
     category: "lanas",
   },
   {
-    id: 5,
     title: "Cisne Rendidora Jumbo",
     description: "lana cisne rendidora jumbo 100% acrilico ",
     color: "Turquesa",
@@ -51,7 +46,6 @@ export const products = [
     category: "lanas",
   },
   {
-    id: 6,
     title: "Agujas de crochet mango de silicona ",
     description:
       "Set de agujas de crochet con mango de silicona para un mejor agarre",
@@ -62,7 +56,6 @@ export const products = [
     category: "agujas",
   },
   {
-    id: 7,
     title: "Agujas de crochet metalicas",
     description: "Agujas de crochet metalicas",
     color: "",
@@ -72,7 +65,6 @@ export const products = [
     category: "agujas",
   },
   {
-    id: 8,
     title: "Aguja de coser",
     description: "Agujas de coser x5 unidades",
     color: "",
@@ -82,7 +74,6 @@ export const products = [
     category: "agujas",
   },
   {
-    id: 9,
     title: "Agujas de tejer",
     description: "Agujas para tejidos a dos agujas",
     color: "",
@@ -92,7 +83,6 @@ export const products = [
     category: "agujas",
   },
   {
-    id: 10,
     title: "Marca puntos crochet",
     description: "marcadores de punto para crochet x10 unidades",
     color: "",
@@ -102,7 +92,6 @@ export const products = [
     category: "alfileres",
   },
   {
-    id: 11,
     title: "Alfiler de gancho",
     description: "alfileres de gancho metálicos",
     color: "",
@@ -112,7 +101,6 @@ export const products = [
     category: "alfileres",
   },
   {
-    id: 12,
     title: "Alfileres",
     description: "Set de alfileres x20 unidades",
     color: "",

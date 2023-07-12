@@ -1,0 +1,27 @@
+.footerContainer{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(236, 189, 189);
+
+}
+
+.newsLetterContainer{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(240, 235, 221);
+    display: flex;
+    justify-content: space-evenly;
+}
+.infoContainer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+.navFooterContainer{
+    width: 50%;
+    height: 80%;
+}
+.contactContainer{
+    width: 50%;
+    height: 80%;
+}

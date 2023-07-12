@@ -10,14 +10,8 @@ import {
 
 import "./ProductDetail.css";
 import ItemCount from "../../common/itemCount/itemCount";
-const ProductDetail = ({ detailProduct }) => {
-  const onAdd = (cantidad) => {
-    let data = {
-      ...detailProduct,
-      quantity: cantidad,
-    };
-    console.log(data);
-  };
+const ProductDetail = ({ detailProduct, quantity, onAdd }) => {
+
   return (
     <div className="detailContainer">
       <div className="detailCard">
@@ -40,7 +34,7 @@ const ProductDetail = ({ detailProduct }) => {
           </CardActionArea>
           <CardActions>
             {detailProduct.stock > 0 ? (
-            <ItemCount stock={detailProduct.stock} initial={1} onAdd={onAdd} />)
+            <ItemCount stock={detailProduct.stock} initial={quantity} onAdd={onAdd} />)
             : <h2>NO HAY STOCK</h2>}
             <Button size="small" color="primary">
               Agregar al carrito

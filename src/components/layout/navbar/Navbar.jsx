@@ -7,12 +7,16 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import CartIcon from "../../common/cartWidget/CartWidget";
 import NavItems from "./NavItems";
 import { Link } from "react-router-dom";
+import CartWidget from "../../common/cartWidget/CartWidget";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContex";
 
 
 const Navbar = () => {
+  const {getTotalItems} = useContext(CartContext)
+  let totalItems = getTotalItems()
   const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -91,7 +95,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-          <CartIcon />
+          <CartWidget totalItems={totalItems} />
         </Toolbar>
       </AppBar>
     </Box>

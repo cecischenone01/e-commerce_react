@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { products } from "../../ProductsMock";
 import { useParams } from "react-router-dom";
+import { dataBase } from "../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const useFetch = (initial) => {
   const [data, setData] = useState(initial);
@@ -8,16 +9,26 @@ export const useFetch = (initial) => {
   const { categoryName } = useParams();
 
   useEffect(() => {
-    let productosFiltrados = products.filter(
-      (product) => product.category === categoryName
-    );
+    let itemsCollection = collection(dataBase, "products");
+    let consult;
 
-    const dataPromise = new Promise((resolve) => {
-      resolve(categoryName ? productosFiltrados : products);
-    });
-    dataPromise
-    .then((res) => setData(res))
-    .catch((err) => console.log(err));
+    if (!categoryName) {
+      consult = itemsCollection;
+    } else {
+      let itemsCollection = collection(dataBase, "products");
+      consult = query(itemsCollection, where("category", "==", categoryName));
+    }
+    getDocs(consult)
+      .then((res) => {
+        let productos = res.docs.map((element) => {
+          return {
+            id: element.id,
+            ...element.data(),
+          };
+        });
+        setData(productos);
+      })
+      .catch((err) => console.log(err));
   }, [categoryName]);
 
   return [data];
