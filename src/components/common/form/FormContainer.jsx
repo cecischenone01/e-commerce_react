@@ -1,6 +1,9 @@
 import { useFormik } from "formik";
 import Form from "./Form";
 import * as Yup from "yup"
+import { dataBase } from "../../../firebaseConfig";
+import { collection, addDoc} from "firebase/firestore";
+import Swal from "sweetalert2";
 
 
 const FormContainer = () => {
@@ -11,8 +14,21 @@ const FormContainer = () => {
       apellido: "",
     },
     onSubmit: (datos) => {
-      console.log("el form se envio");
-      console.log(datos);
+      let users={
+        userData: datos
+      }
+
+      let usersCollection = collection(dataBase, "users")
+      addDoc(usersCollection, users)
+
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Felicidades!",
+        text: "Ya estas registrado para recibir nuestras novedades.",
+        showConfirmButton: false,
+        timer: 4000,
+      });
     },
     validateOnChange: false,
     validationSchema: Yup.object({

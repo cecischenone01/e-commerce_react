@@ -3,9 +3,9 @@ import { CartContext } from "../../../context/CartContex"
 import Swal from "sweetalert2";
 import Cart from "./Cart";
 
+
 const CartContainer = () => {
   const {cart, clearCart, clearById, getTotalPrice} = useContext(CartContext)
-  console.log(cart)
 
   const totalPrice = getTotalPrice()
 

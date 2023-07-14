@@ -8,30 +8,22 @@ const NavItems = () => {
       <ul className={style.li}>
         <Link to="/products">
           <li className={style.li}>
-            <Button variant="text" color="inherit">
-              PRODUCTOS
-            </Button>
+            <Button sx={{ color: "black", fontSize: 16 }}>PRODUCTOS</Button>
           </li>
         </Link>
         <Link to="/category/lanas">
           <li className={style.li}>
-            <Button variant="text" color="inherit">
-              LANAS
-            </Button>
+            <Button sx={{ color: "black", fontSize: 16 }}>LANAS</Button>
           </li>
         </Link>
         <Link to="/category/agujas">
           <li className={style.li}>
-            <Button variant="text" color="inherit">
-              AGUJAS
-            </Button>
+            <Button sx={{ color: "black", fontSize: 16 }}>AGUJAS</Button>
           </li>
         </Link>
         <Link to="/category/alfileres">
           <li className={style.li}>
-            <Button variant="text" color="inherit">
-              ALFILERES
-            </Button>
+            <Button sx={{ color: "black", fontSize: 16 }}>ALFILERES</Button>
           </li>
         </Link>
       </ul>

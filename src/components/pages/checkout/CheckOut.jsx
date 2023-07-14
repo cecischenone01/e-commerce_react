@@ -1,21 +1,29 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import "./checkOut.css";
 
 const CheckOut = ({handleSubmit, handleChange, errors, orderId}) => {
   return (
-    <>
+    <div className="coContainer">
       {orderId ? (
         <div>
-          <h1>Su compra se realizó con exito</h1>
-          <h3>Orden N°: {orderId}</h3>
+          <Typography variant="h4">¡Su compra se realizó con exito!</Typography>
+          <Typography variant="h6">Orden N°: {orderId}</Typography>
         </div>
       ) : (
-        <div className="container">
+        <div>
           <form className="formContainer" onSubmit={handleSubmit}>
             <div className="textfieldContainer">
+              <div className="titleContainer">
+                <Typography variant="h4">
+                  ¡Estas a un paso de finalizar tu compra!
+                </Typography>
+                <Typography variant="h6">
+                  Por favor completá el siguiente formulario con tus datos.
+                </Typography>
+              </div>
               <TextField
                 className="textfield"
-                label="Nombre"
+                label="nombre"
                 variant="outlined"
                 name="nombre"
                 onChange={handleChange}
@@ -26,7 +34,7 @@ const CheckOut = ({handleSubmit, handleChange, errors, orderId}) => {
             <div className="textfieldContainer">
               <TextField
                 className="textfield"
-                label="Email"
+                label="email"
                 variant="outlined"
                 name="email"
                 onChange={handleChange}
@@ -37,7 +45,7 @@ const CheckOut = ({handleSubmit, handleChange, errors, orderId}) => {
             <div className="textfieldContainer">
               <TextField
                 className="textfield"
-                label="Teléfono"
+                label="telefono"
                 variant="outlined"
                 name="telefono"
                 onChange={handleChange}
@@ -51,7 +59,7 @@ const CheckOut = ({handleSubmit, handleChange, errors, orderId}) => {
           </form>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

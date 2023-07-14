@@ -1,16 +1,22 @@
-.container{
+.coContainer{
     width: 100%;
-    height: 400px;
+    height: 500px;
+    text-align: center;
 }
 .formContainer{
     width: 50%;
     height: 300px;
     display: inline-block;
-    margin: 30px;
+    margin-top: 60px;
 }
 .textfieldContainer{
-    margin: 10px;
+    margin: 15px;
 }
 .textfield{
     width: 100%;
+}
+.titleContainer{
+    background-color: rgba(231, 191, 231, 0.356);
+    padding: 5px;
+    margin-bottom: 20px;
 }

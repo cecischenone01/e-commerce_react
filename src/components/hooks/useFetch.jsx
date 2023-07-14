@@ -28,7 +28,7 @@ export const useFetch = (initial) => {
         });
         setData(productos);
       })
-      .catch((err) => console.log(err));
+      .catch();
   }, [categoryName]);
 
   return [data];

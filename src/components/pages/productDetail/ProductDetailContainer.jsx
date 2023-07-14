@@ -38,7 +38,7 @@ const ProductDetailContainer = () => {
     .then((res)=>{
       setDetailProduct({id:res.id, ...res.data()})
     })
-    .catch((err)=>console.log(err))
+    .catch()
 
     },[id]);
 

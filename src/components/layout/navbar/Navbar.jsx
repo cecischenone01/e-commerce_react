@@ -80,7 +80,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
             <Link to="/">
               <img
                 style={{ height: "80px" }}
-                src="https://res.cloudinary.com/ddyhhrr0g/image/upload/v1686200146/N_1_f4srlo.png"
+                src="https://res.cloudinary.com/ddyhhrr0g/image/upload/v1686200628/N_2_cawlfn.png"
                 alt=""
               />
             </Link>

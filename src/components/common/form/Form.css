@@ -1,0 +1,13 @@
+.formularioContainer{
+    display: flex
+}
+.textField{
+    margin: 10px;
+    font-family:'Montserrat', sans-serif;
+}
+.button{
+    height: 40px;
+}
+.icon{
+    margin: 8px;
+}
